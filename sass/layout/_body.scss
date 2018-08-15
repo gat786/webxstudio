@@ -1,0 +1,5 @@
+body
+{
+    display: grid;
+    grid-template-columns: [full-start] minmax(6rem,1fr) [content-start] repeat(8, minmax(min-content, 14rem)) [content-end] minmax(6rem,1fr) [full-end];
+}

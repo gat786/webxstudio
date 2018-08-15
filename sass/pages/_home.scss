@@ -1,0 +1,6 @@
+.services
+{
+    grid-column: content-start / content-end;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(min-content, 1fr));;
+}

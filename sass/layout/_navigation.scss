@@ -1,0 +1,174 @@
+nav
+{
+    position: fixed;
+    width: 100%;
+    margin-top: 1.5rem;
+    z-index: 10;
+    padding: 0 1rem;
+
+    .nav-btn
+    {
+        margin-top: .3rem;   
+        position: fixed;
+        right: 1.5rem;
+        display: block;
+        cursor: pointer;
+        height: 3rem;
+        width: 3rem;
+        z-index: 20;
+
+        i,
+        i::after,
+        i::before
+        {
+            position: relative;
+            // top: 3rem;
+            width: 3rem;
+            height: 2px;
+            background-color: #dff9fb;
+            display: inline-block;
+            transition: all .2s;
+        }
+
+        i::after,
+        i::before
+        {
+            content: "";
+            position: absolute;
+            left: 0;
+        }
+
+        i::before
+        {
+            top: -.8rem;
+        }
+
+        i::after
+        {
+            top: .8rem;
+        }
+
+        @media only screen and (min-width: 56.2em)
+        {
+            display: none;
+        }
+    }
+
+
+    .logo
+    {
+        @media only screen and (min-width: 56.2em)
+        {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(min-content, 1fr));
+            margin-left: 2rem;
+            align-items: center;
+        }
+        
+        a
+        {
+            color: $color-text;
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 2rem;
+            letter-spacing: 1px;
+            text-decoration: none;
+            @media only screen and (min-width: 56.2em)
+            {
+                grid-column: 1 / 2;
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .nav-wrapper
+    {
+        @media only screen and (max-width: 56.2em)
+        {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0%;
+            z-index: -10;
+            opacity: 0;
+            transition: all .2s;
+        }
+
+        @media only screen and (min-width: 56.2em)
+        {
+            grid-column: 2 / 3;
+        }
+        ul
+        {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            list-style: none;
+            width: 100%;
+            float: right;
+
+            @media only screen and (min-width: 56.2em)
+            {
+                position: relative;
+                transform: none;
+                top: 0;
+            }
+
+            li
+            {
+                display: block;
+                text-align: right;
+                margin-right: 2rem;
+                padding: 1rem;
+                transition: all .2s 1s ease;
+                
+                a
+                {
+                    display: inline-block;
+                    outline: none;
+                }
+
+                @media only screen and (min-width: 56.2em)
+                {
+                    display: inline-block;
+                    padding: 0;
+
+                    &:not(:last-child)
+                    {
+                        margin-right: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#nav:checked ~ .logo .nav-wrapper
+{
+    opacity: 1;
+    width: 100%;
+    background-image: linear-gradient(to right, $color-gradient-1, $color-gradient-2);
+    z-index: 10;
+}
+
+#nav:checked + .nav-btn i
+{
+    background: #000;
+    transition: all 0.2s ease;
+}
+
+#nav:checked + .nav-btn i::before
+{
+    top: 0;
+    transform: rotate(135deg);
+}
+#nav:checked + .nav-btn i::after
+{
+    top: 0;
+    transform: rotate(-135deg);
+}
+#nav:checked + .nav-btn i
+{
+    background: transparent;
+}

@@ -1,0 +1,58 @@
+.btn,
+.btn:link,
+.btn:visited
+{
+    padding: 1rem 2.5rem;
+    outline: none;
+    margin: 0;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-radius: 35rem;
+    box-shadow: 0 1rem 2rem rgba(#000,.5);
+    background-color: #fff;
+    color: $color-primary;
+    transition: all .2s;
+    text-transform: uppercase;
+    position: relative;
+
+    &::after
+    {
+        content: "";
+        height: 100%;
+        width: 100%;
+        display: inline-block;
+        border-radius: 35rem;
+        background-color: #fff;
+        position: absolute;
+        top: 0;
+        left: 0;
+        backface-visibility: hidden;
+        transition: all .2s;
+        z-index: -1;
+    }
+}
+.btn:hover
+{
+    cursor: pointer;
+    box-shadow: 0 2rem 4rem rgba(#000,.5);
+    transform: translateY(-.2rem);
+
+    &::after
+    {
+        transform: scaleX(1.8) scaleY(1.5);
+        opacity: 0;
+    }
+}
+.btn:active
+{
+    cursor: pointer;
+    box-shadow: 0 .5rem 1rem rgba(#000,.5);
+    transform: translateY(-.1rem);
+}
+
+.btn-animate
+{
+    backface-visibility: hidden;
+    animation: btn-animate .5s ease-out 2s backwards;
+}
