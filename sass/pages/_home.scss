@@ -7,6 +7,11 @@
     grid-column-gap: 1.5rem;
     grid-row-gap: 5rem;
 
+    @media only screen and (min-width: 75.5em)
+    {
+        grid-template-columns: repeat(3,22rem);
+    }
+
     &__box
     {
         width: 100%;
@@ -37,7 +42,7 @@
     &__heading
     {
         display: block;
-        padding: 1rem .5;
+        padding: 1rem .5rem;
         text-align: center;
         font-weight: 600;
         font-size: 1.4rem;
@@ -54,10 +59,22 @@
 }
 .why
 {
+
     grid-column: content-start / content-end;
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
-    grid-column-gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(22rem,1fr));
+    grid-column-gap: 5rem;
+
+    @media only screen and (min-width: 56.2em) and (max-width: 75.5em)
+    {
+        grid-template-columns: repeat(2, 28rem);
+        grid-column-gap: 3rem;
+    }
+    @media only screen and (min-width: 75.5em)
+    {
+        grid-template-columns: 1fr repeat(2, 30rem) 1fr;
+        grid-column-gap: 5rem;
+    }
 
     &__img
     {
@@ -67,6 +84,11 @@
         border-radius: .5rem;
         box-shadow: 0 1rem 2rem rgba(#000,.3);
         margin-bottom: 2rem;
+
+        @media only screen and (min-width: 75.5em)
+        {
+            grid-column: 2 / 3;
+        }
     }
 
     &__text
@@ -78,6 +100,11 @@
         align-items: center;
         color: rgba($color-gradient-2,.8);
 
+        @media only screen and (min-width: 75.5em)
+        {
+            grid-column: 3 / 4;
+        }
+
         span
         {
             text-indent: 5rem;
@@ -85,7 +112,88 @@
         }
     }
 }
+
 .how
 {
     grid-column: content-start / content-end;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(22rem,1fr));
+    grid-column-gap: 5rem;
+
+    @media only screen and (min-width: 56.2em) and (max-width: 75.5em)
+    {
+        grid-template-columns: repeat(2, 28rem);
+        grid-column-gap: 3rem;
+    }
+
+    @media only screen and (min-width: 75.5em)
+    {
+        grid-template-columns: 1fr repeat(2, 30rem) 1fr;
+        grid-column-gap: 5rem;
+    }
+
+    &__img
+    {
+        width: 100%;
+        height: 28rem;
+        object-fit: cover;
+        border-radius: .5rem;
+        box-shadow: 0 1rem 2rem rgba(#000,.3);
+        margin-bottom: 2rem;
+
+        @media only screen and (min-width: 75.5em)
+        {
+            grid-column: 3 / 4;
+        }
+    }
+
+    &__list
+    {
+        text-align: justify;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        color: rgba($color-gradient-2,.8);
+        list-style: none;
+
+        &--item
+        {
+            background-image: url(../img/check.svg);   
+            background-size: 1rem;
+            background-repeat: no-repeat;
+            padding-left: 2rem;
+            background-position: 0 .2rem;
+            padding-bottom: 1rem;
+        }
+
+        @media only screen and (min-width: 75.5em)
+        {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+        }
+    }
+}
+
+.create
+{
+    grid-column: full-start / full-end;
+    height: 30rem;
+    background-image: linear-gradient(to bottom right, rgba($color-gradient-1,.5), rgba($color-gradient-2,.5)), url(../img/create.jpg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    clip-path: polygon(0 25%,100% 0,100% 75%,0 100%);
+    padding: 2rem;
+    background-attachment: fixed;
+
+    &__heading
+    {
+        grid-column: content-start / content-end;
+        font-size: 2.5rem;
+        color: #dff9fb;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-align: justify;
+    }
 }
