@@ -13,11 +13,14 @@
         display: flex;
         flex-direction: column;
         background-color: rgba($color-gradient-2,.02);
-        padding-bottom: 3rem;
+        padding-bottom: 2rem;
         border-radius: 5px;
         overflow: hidden;
         box-shadow: 0 1rem 2rem rgba(#000,.5);
         transition: all .2s;
+        justify-content: flex-start;
+        align-items: center;
+        align-content: center;
 
         &:hover
         {
@@ -37,7 +40,7 @@
         padding: 1rem;
         text-align: center;
         font-weight: 600;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         text-transform: uppercase;
         letter-spacing: 1px;
         color: $color-primary;
@@ -48,5 +51,16 @@
         padding: 0 2rem;
         font-size: .9rem;
         text-align: justify;
+    }
+}
+.why
+{
+    grid-column: content-start / content-end;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(min-content,50%));
+
+    &__img
+    {
+        width: 100%;
     }
 }
