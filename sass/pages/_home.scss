@@ -2,5 +2,51 @@
 {
     grid-column: content-start / content-end;
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(min-content, 1fr));;
+    grid-template-columns: repeat(auto-fit,minmax(min-content, 20rem));
+    justify-content: center;
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 5rem;
+
+    &__box
+    {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: rgba($color-gradient-2,.02);
+        padding-bottom: 3rem;
+        border-radius: 5px;
+        overflow: hidden;
+        box-shadow: 0 1rem 2rem rgba(#000,.5);
+        transition: all .2s;
+
+        &:hover
+        {
+            transform: translateY(-.2rem) scale(1.01);
+        }
+    }
+    &__img
+    {
+        width: 100%;
+        height: 15rem;
+        object-fit: cover;
+    }
+
+    &__heading
+    {
+        display: block;
+        padding: 1rem;
+        text-align: center;
+        font-weight: 600;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: $color-primary;
+    }
+
+    &__text
+    {
+        padding: 0 2rem;
+        font-size: .9rem;
+        text-align: justify;
+    }
 }

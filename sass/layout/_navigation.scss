@@ -2,9 +2,10 @@ nav
 {
     position: fixed;
     width: 100%;
-    margin-top: 1.5rem;
+    margin-top: 0;
     z-index: 10;
-    padding: 0 1rem;
+    padding: 1.5rem 1rem;
+    transition: all .6s;
 
     .nav-btn
     {
@@ -127,6 +128,7 @@ nav
                 {
                     display: inline-block;
                     outline: none;
+                    transition: all .5s;
                 }
 
                 @media only screen and (min-width: 56.2em)
@@ -137,6 +139,11 @@ nav
                     &:not(:last-child)
                     {
                         margin-right: 2rem;
+                    }
+                    a:hover
+                    {
+                        // color: $color-gradient-2;
+                        box-shadow: 0 1rem 2rem rgba(#000,.5);
                     }
                 }
             }
