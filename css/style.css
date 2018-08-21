@@ -7,13 +7,13 @@
   box-sizing: inherit; }
 
 html {
-  font-size: calc(13px + 2 * ( (100vw - 420px) / 480)); }
+  font-size: calc(12px + 2 * ( (100vw - 420px) / 480)); }
   @media screen and (max-width: 420px) {
     html {
-      font-size: 13px; } }
+      font-size: 12px; } }
   @media screen and (min-width: 900px) {
     html {
-      font-size: 15px; } }
+      font-size: 14px; } }
 
 body {
   box-sizing: border-box;
@@ -57,32 +57,56 @@ html {
 
 .heading-primary {
   color: #dff9fb;
-  font-size: 2.3rem;
+  font-size: calc(22px + 13 * ( (100vw - 420px) / 480));
   font-weight: 300;
   letter-spacing: 2px; }
+  @media screen and (max-width: 420px) {
+    .heading-primary {
+      font-size: 22px; } }
+  @media screen and (min-width: 900px) {
+    .heading-primary {
+      font-size: 35px; } }
 
 .heading-primary--sub {
   color: #dff9fb;
-  font-size: 2.7rem;
+  font-size: calc(26px + 14 * ( (100vw - 420px) / 480));
   font-weight: 600;
   letter-spacing: 2px;
   display: block;
   padding: .2rem; }
+  @media screen and (max-width: 420px) {
+    .heading-primary--sub {
+      font-size: 26px; } }
+  @media screen and (min-width: 900px) {
+    .heading-primary--sub {
+      font-size: 40px; } }
 
 .brand {
   font-weight: 500;
-  font-size: 1.5rem; }
+  font-size: calc(22px + 3 * ( (100vw - 420px) / 480)); }
+  @media screen and (max-width: 420px) {
+    .brand {
+      font-size: 22px; } }
+  @media screen and (min-width: 900px) {
+    .brand {
+      font-size: 25px; } }
   .brand-X {
     color: red; }
 
 .heading-secondary {
   grid-column: 1 / -1;
-  font-size: 2.5rem;
+  font-size: calc(28px + 8 * ( (100vw - 420px) / 480));
   font-weight: 300;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #2c3e50; }
+  @media screen and (max-width: 420px) {
+    .heading-secondary {
+      font-size: 28px; } }
+  @media screen and (min-width: 900px) {
+    .heading-secondary {
+      font-size: 36px; } }
 
 .btn,
 .btn:link,
@@ -159,7 +183,7 @@ nav {
   position: fixed;
   width: 100%;
   margin-top: 0;
-  z-index: 10;
+  z-index: 999;
   padding: 1.5rem 1rem;
   transition: all .6s; }
   nav .nav-btn {
@@ -277,13 +301,13 @@ nav {
 .services {
   grid-column: content-start / content-end;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 22rem));
   justify-content: center;
   grid-column-gap: 1.5rem;
   grid-row-gap: 5rem; }
   @media only screen and (min-width: 75.5em) {
     .services {
-      grid-template-columns: repeat(3, 22rem); } }
+      grid-template-columns: repeat(3, minmax(20rem, 24rem)); } }
   .services__box {
     width: 100%;
     display: flex;
@@ -308,13 +332,26 @@ nav {
     padding: 1rem .5rem;
     text-align: center;
     font-weight: 600;
-    font-size: 1.4rem;
+    font-size: calc(17px + 3 * ( (100vw - 420px) / 480));
     text-transform: uppercase;
     letter-spacing: 1px;
     color: #2c3e50; }
+    @media screen and (max-width: 420px) {
+      .services__heading {
+        font-size: 17px; } }
+    @media screen and (min-width: 900px) {
+      .services__heading {
+        font-size: 20px; } }
   .services__text {
     padding: 0 2rem;
-    text-align: justify; }
+    text-align: justify;
+    font-size: calc(14px + 2 * ( (100vw - 420px) / 480)); }
+    @media screen and (max-width: 420px) {
+      .services__text {
+        font-size: 14px; } }
+    @media screen and (min-width: 900px) {
+      .services__text {
+        font-size: 16px; } }
 
 .why {
   grid-column: content-start / content-end;
@@ -323,48 +360,46 @@ nav {
   grid-column-gap: 5rem; }
   @media only screen and (min-width: 56.2em) and (max-width: 75.5em) {
     .why {
-      grid-template-columns: repeat(2, 28rem);
+      grid-template-columns: repeat(2, minmax(24rem, 1fr));
       grid-column-gap: 3rem; } }
   @media only screen and (min-width: 75.5em) {
     .why {
-      grid-template-columns: 1fr repeat(2, 30rem) 1fr;
+      grid-template-columns: 1fr repeat(2, minmax(30rem, 33rem)) 1fr;
       grid-column-gap: 5rem; } }
   .why__img {
     width: 100%;
     height: 28rem;
     object-fit: cover;
     border-radius: .5rem;
-<<<<<<< HEAD
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3); }
-  .why__text {
-    text-align: justify;
-    display: flex;
-    padding: 0 3rem;
-=======
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
     margin-bottom: 2rem; }
     @media only screen and (min-width: 75.5em) {
       .why__img {
         grid-column: 2 / 3; } }
-  .why__text {
+  .why__list {
     text-align: justify;
     display: flex;
->>>>>>> 5832fc49970abc32126327491df2109f0601403d
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: center;
-    color: rgba(19, 15, 64, 0.8); }
-<<<<<<< HEAD
-    .why__text span {
-      text-indent: 5rem;
-      display: block; }
-=======
+    color: rgba(19, 15, 64, 0.8);
+    list-style: none;
+    font-size: calc(14px + 2 * ( (100vw - 420px) / 480)); }
+    @media screen and (max-width: 420px) {
+      .why__list {
+        font-size: 14px; } }
+    @media screen and (min-width: 900px) {
+      .why__list {
+        font-size: 16px; } }
+    .why__list--item {
+      background-image: url(../img/check.svg);
+      background-size: 1rem;
+      background-repeat: no-repeat;
+      padding-left: 2rem;
+      background-position: 0 .2rem;
+      padding-bottom: 1rem; }
     @media only screen and (min-width: 75.5em) {
-      .why__text {
+      .why__list {
         grid-column: 3 / 4; } }
-    .why__text span {
-      text-indent: 5rem;
-      display: block; }
 
 .how {
   grid-column: content-start / content-end;
@@ -373,7 +408,7 @@ nav {
   grid-column-gap: 5rem; }
   @media only screen and (min-width: 56.2em) and (max-width: 75.5em) {
     .how {
-      grid-template-columns: repeat(2, 28rem);
+      grid-template-columns: repeat(2, minmax(24, 1fr));
       grid-column-gap: 3rem; } }
   @media only screen and (min-width: 75.5em) {
     .how {
@@ -395,7 +430,14 @@ nav {
     flex-direction: column;
     justify-content: space-evenly;
     color: rgba(19, 15, 64, 0.8);
-    list-style: none; }
+    list-style: none;
+    font-size: calc(14px + 2 * ( (100vw - 420px) / 480)); }
+    @media screen and (max-width: 420px) {
+      .how__list {
+        font-size: 14px; } }
+    @media screen and (min-width: 900px) {
+      .how__list {
+        font-size: 16px; } }
     .how__list--item {
       background-image: url(../img/check.svg);
       background-size: 1rem;
@@ -426,4 +468,3 @@ nav {
     text-transform: uppercase;
     letter-spacing: 1px;
     text-align: justify; }
->>>>>>> 5832fc49970abc32126327491df2109f0601403d
