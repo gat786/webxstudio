@@ -122,13 +122,19 @@ nav
                 display: block;
                 text-align: right;
                 margin-right: 2rem;
-                // padding: 1rem;
+                padding: 1rem;
                 transition: all .2s 1s ease;
                 
                 a
                 {
-                    display: inline-block;
+                    display: block;
                     outline: none;
+                    color: $color-text;
+                    text-transform: uppercase;
+                    font-weight: 500;
+                    font-size: 2rem;
+                    letter-spacing: 1px;
+                    text-decoration: none;
                     transition: all .5s;
                 }
 

@@ -263,10 +263,17 @@ nav {
       display: block;
       text-align: right;
       margin-right: 2rem;
+      padding: 1rem;
       transition: all .2s 1s ease; }
       nav .nav-wrapper ul li a {
-        display: inline-block;
+        display: block;
         outline: none;
+        color: #dff9fb;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 2rem;
+        letter-spacing: 1px;
+        text-decoration: none;
         transition: all .5s; }
       @media only screen and (min-width: 56.2em) {
         nav .nav-wrapper ul li {
@@ -479,3 +486,6 @@ nav {
     text-transform: uppercase;
     letter-spacing: 1px;
     text-align: justify; }
+
+.cta {
+  grid-column: full-start / full-end; }

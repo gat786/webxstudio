@@ -204,3 +204,8 @@
         text-align: justify;
     }
 }
+
+.cta
+{
+    grid-column: full-start / full-end;
+}
