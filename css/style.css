@@ -184,7 +184,7 @@ nav {
   width: 100%;
   margin-top: 0;
   z-index: 999;
-  padding: 1.5rem 1rem;
+  padding: 1rem;
   transition: all .6s; }
   nav .nav-btn {
     margin-top: .3rem;
@@ -222,15 +222,16 @@ nav {
       grid-template-columns: repeat(auto-fit, minmax(min-content, 1fr));
       margin-left: 2rem;
       align-items: center; } }
-  nav .logo a {
+  nav .logo > a {
     color: #dff9fb;
     text-transform: uppercase;
     font-weight: 500;
     font-size: 2rem;
     letter-spacing: 1px;
-    text-decoration: none; }
+    text-decoration: none;
+    padding: 1rem; }
     @media only screen and (min-width: 56.2em) {
-      nav .logo a {
+      nav .logo > a {
         grid-column: 1 / 2;
         font-size: 1rem; } }
   @media only screen and (max-width: 56.2em) {
@@ -262,7 +263,6 @@ nav {
       display: block;
       text-align: right;
       margin-right: 2rem;
-      padding: 1rem;
       transition: all .2s 1s ease; }
       nav .nav-wrapper ul li a {
         display: inline-block;
@@ -270,17 +270,28 @@ nav {
         transition: all .5s; }
       @media only screen and (min-width: 56.2em) {
         nav .nav-wrapper ul li {
-          display: inline-block;
-          padding: 0; }
+          display: inline-block; }
+          nav .nav-wrapper ul li a {
+            color: #dff9fb;
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            text-decoration: none;
+            padding: .6rem; } }
+    @media only screen and (min-width: 56.2em) and (min-width: 75.2em) {
+      nav .nav-wrapper ul li a {
+        font-size: 17px; } }
+      @media only screen and (min-width: 56.2em) {
           nav .nav-wrapper ul li:not(:last-child) {
-            margin-right: 2rem; }
+            margin-right: 1rem; }
           nav .nav-wrapper ul li a:hover {
             box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5); } }
 
 #nav:checked ~ .logo .nav-wrapper {
   opacity: 1;
   width: 100%;
-  background-image: linear-gradient(to right, #4834d4, #130f40);
+  background-image: linear-gradient(to right, rgba(72, 52, 212, 0.8), rgba(19, 15, 64, 0.8));
   z-index: 10; }
 
 #nav:checked + .nav-btn i {
