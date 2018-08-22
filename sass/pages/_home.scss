@@ -208,4 +208,21 @@
 .cta
 {
     grid-column: full-start / full-end;
+    padding: 3.5rem 0;
+    background-image: linear-gradient(to right, rgba(255,255,255,.7),rgba(255,255,255,.7)), url(../img/cta.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+    &__text
+    {
+        grid-column: content-start / content-end;
+        padding: 1rem;
+        text-align: justify;
+        @include fluid-type(16px, 20px);
+    }
 }
