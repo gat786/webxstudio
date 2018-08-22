@@ -252,7 +252,12 @@ body {
   align-items: center; }
   @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 200px) {
     .header {
-      background-image: linear-gradient(to right bottom, rgba(72, 52, 212, 0.7), rgba(19, 15, 64, 0.7)), url("../img/bg-header 2x.jpeg"); } }
+      background-image: linear-gradient(to right bottom, rgba(72, 52, 212, 0.7), rgba(19, 15, 64, 0.7)), url("../img/bg-header 2x.jpg"); } }
+  .header__contact {
+    background-image: linear-gradient(to right bottom, rgba(51, 51, 51, 0.7), rgba(51, 51, 51, 0.7)), url("../img/contact.jpg"); }
+    @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 200px) {
+      .header__contact {
+        background-image: linear-gradient(to right bottom, rgba(51, 51, 51, 0.7), rgba(51, 51, 51, 0.7)), url("../img/contact2x.jpg"); } }
 
 nav {
   position: fixed;

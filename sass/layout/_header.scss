@@ -10,8 +10,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 200px) 
     {
-      background-image: linear-gradient(to right bottom, rgba($color-gradient-1,.7),rgba($color-gradient-2,.7)), url("../img/bg-header 2x.jpeg"); 
+      background-image: linear-gradient(to right bottom, rgba($color-gradient-1,.7),rgba($color-gradient-2,.7)), url("../img/bg-header 2x.jpg"); 
+    }
+
+    &__contact
+    {
+      background-image: linear-gradient(to right bottom, rgba(#333,.7),rgba(#333,.7)), url("../img/contact.jpg");
+      @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 200px) 
+      {
+        background-image: linear-gradient(to right bottom, rgba(#333,.7),rgba(#333,.7)), url("../img/contact2x.jpg");
+      }
     }
 }
