@@ -121,7 +121,7 @@ html {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
   background-color: #fff;
   color: #2c3e50;
-  transition: all .2s;
+  transition: all .3s;
   text-transform: uppercase;
   position: relative; }
   .btn::after,
@@ -366,7 +366,8 @@ nav {
             font-size: 1rem;
             letter-spacing: 1px;
             text-decoration: none;
-            padding: .6rem; } }
+            padding: .6rem;
+            border-radius: 3px; } }
     @media only screen and (min-width: 56.2em) and (min-width: 75.2em) {
       nav .nav-wrapper ul li a {
         font-size: 17px; } }

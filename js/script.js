@@ -1,7 +1,7 @@
 $(window).scroll(function(){
   if($(window).scrollTop() > 0 || $(window).top > 0)
   {
-    $('nav').css({"backgroundColor":"#2c3e50dd","boxShadow":"0 1rem 2rem rgba(0,0,0,.5)"});
+    $('nav').css({"backgroundColor":"rgba(43,62,79,0.8)","boxShadow":"0 1rem 2rem rgba(0,0,0,.5)"});
   }
   else
   {
