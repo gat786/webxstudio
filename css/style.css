@@ -398,6 +398,9 @@ nav {
 #nav:checked + .nav-btn i {
   background: transparent; }
 
+.contact {
+  grid-column: content-start / content-end; }
+
 .services {
   grid-column: content-start / content-end;
   display: grid;
