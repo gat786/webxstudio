@@ -1,13 +1,21 @@
-$(window).scroll(function(){
-  if($(window).scrollTop() > 0 || $(window).top > 0)
+window.addEventListener("scroll",function(){
+  change();
+});
+change();
+
+function change()
+{
+  if(window.scrollY > 0)
   {
-    $('nav').css({"backgroundColor":"rgba(43,62,79,0.8)","boxShadow":"0 1rem 2rem rgba(0,0,0,.5)"});
+    document.querySelector('nav').style.backgroundColor = "rgba(43,62,79,0.8)";
+    document.querySelector('nav').style.boxShadow = "0 1rem 2rem rgba(0,0,0,.5)";
   }
   else
   {
-    $('nav').css({"backgroundColor":"transparent","boxShadow":"0 0 0 transparent"});
+    document.querySelector('nav').style.backgroundColor = "transparent";
+    document.querySelector('nav').style.boxShadow = "0 0 0 transparent";
   }
-});
+}
 
 var TxtRotate = function(el, toRotate, period) {
   this.toRotate = toRotate;

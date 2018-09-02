@@ -17,7 +17,7 @@ html {
 
 body {
   box-sizing: border-box;
-  background-color: #dcdde1; }
+  background-color: #eaeaee; }
 
 @keyframes btn-animate {
   0% {
@@ -156,6 +156,12 @@ html {
 .btn-animate {
   backface-visibility: hidden;
   animation: btn-animate .5s ease-out 2s backwards; }
+
+.btn--primary {
+  background-color: #130f40;
+  color: #fff; }
+  .btn--primary::after {
+    background-color: #130f40; }
 
 body {
   display: grid;
@@ -399,7 +405,62 @@ nav {
   background: transparent; }
 
 .contact {
-  grid-column: content-start / content-end; }
+  grid-column: content-start / content-end;
+  display: grid;
+  grid-template-columns: 1fr minmax(20rem, 40rem) 1fr; }
+  .contact .form {
+    grid-column: 2 / 3;
+    margin-top: 2rem;
+    padding: 3rem 2rem;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: right; }
+    .contact .form__group {
+      text-align-last: left;
+      width: 100%; }
+    .contact .form__group:not(:last-child) {
+      margin-bottom: 2rem; }
+    .contact .form__label {
+      display: block;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #2c3e50;
+      font-size: calc(14px + 2 * ( (100vw - 420px) / 700));
+      font-weight: 400;
+      margin-left: 2px; }
+      @media screen and (max-width: 420px) {
+        .contact .form__label {
+          font-size: 14px; } }
+      @media screen and (min-width: 1120px) {
+        .contact .form__label {
+          font-size: 16px; } }
+    .contact .form__input {
+      width: 100%;
+      outline: none;
+      border: none;
+      padding: .5rem 0 2px 0;
+      border-bottom: 1px solid #2c3e50;
+      border-radius: 2px;
+      color: rgba(44, 62, 80, 0.8);
+      font-size: calc(14px + 2 * ( (100vw - 420px) / 700));
+      font-weight: 400;
+      transition: all .2s; }
+      @media screen and (max-width: 420px) {
+        .contact .form__input {
+          font-size: 14px; } }
+      @media screen and (min-width: 1120px) {
+        .contact .form__input {
+          font-size: 16px; } }
+    .contact .form__input:invalid {
+      border-bottom: 1px solid crimson; }
+    .contact .form__input:focus {
+      border-bottom: 1px solid #4834d4; }
+    .contact .form .note {
+      display: block;
+      text-align: center;
+      margin-top: 1rem;
+      color: #333; }
 
 .services {
   grid-column: content-start / content-end;

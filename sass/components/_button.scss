@@ -56,3 +56,13 @@
     backface-visibility: hidden;
     animation: btn-animate .5s ease-out 2s backwards;
 }
+.btn--primary
+{
+    background-color: $color-gradient-2;
+    color: #fff;
+
+    &::after
+    {
+        background-color: $color-gradient-2;
+    }
+}
