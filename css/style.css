@@ -264,6 +264,11 @@ body {
     @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 200px) {
       .header__contact {
         background-image: linear-gradient(to right bottom, rgba(51, 51, 51, 0.7), rgba(51, 51, 51, 0.7)), url("../img/contact2x.jpg"); } }
+  .header__works {
+    background-image: linear-gradient(to right bottom, rgba(51, 51, 51, 0.7), rgba(51, 51, 51, 0.7)), url("../img/our-works.jpeg"); }
+    @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 200px) {
+      .header__works {
+        background-image: linear-gradient(to right bottom, rgba(51, 51, 51, 0.7), rgba(51, 51, 51, 0.7)), url("../img/our-works-2x.jpeg"); } }
 
 nav {
   position: fixed;
@@ -655,3 +660,6 @@ nav {
     @media screen and (min-width: 1120px) {
       .cta__text {
         font-size: 20px; } }
+
+.our-works {
+  grid-column: content-start / content-end; }
