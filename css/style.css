@@ -52,6 +52,9 @@ body {
 .margin-top-huge {
   margin-top: 8rem !important; }
 
+.text-white {
+  color: #dff9fb !important; }
+
 html {
   font-family: "Open Sans",sans-serif; }
 
@@ -410,12 +413,27 @@ nav {
   background: transparent; }
 
 .contact {
-  grid-column: content-start / content-end;
+  grid-column: full-start / full-end;
   display: grid;
-  grid-template-columns: 1fr minmax(20rem, 40rem) 1fr; }
+  grid-template-columns: 1fr minmax(20rem, 40rem) 1fr;
+  background-image: linear-gradient(to right bottom, #4834d4, #130f40);
+  margin-top: -7%;
+  padding-bottom: 10rem; }
+  .contact__text {
+    display: block;
+    margin-top: 1rem;
+    font-size: calc(10px + 4 * ( (100vw - 420px) / 700));
+    margin-bottom: 2rem;
+    color: rgba(0, 0, 0, 0.3); }
+    @media screen and (max-width: 420px) {
+      .contact__text {
+        font-size: 10px; } }
+    @media screen and (min-width: 1120px) {
+      .contact__text {
+        font-size: 14px; } }
   .contact .form {
+    margin-top: 25vh;
     grid-column: 2 / 3;
-    margin-top: 2rem;
     padding: 3rem 2rem;
     background-color: #fff;
     border-radius: 5px;
