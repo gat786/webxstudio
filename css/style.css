@@ -702,7 +702,8 @@ nav {
     color: #dff9fb;
     font-size: calc(12px + 4 * ( (100vw - 420px) / 700));
     text-transform: uppercase;
-    letter-spacing: 1px; }
+    letter-spacing: 1px;
+    font-weight: 600; }
     @media screen and (max-width: 420px) {
       .our-works .work__link {
         font-size: 12px; } }
