@@ -43,4 +43,14 @@
       background-image: linear-gradient(to right bottom, rgba(#333,.7),rgba(#333,.7)), url("../img/work_with_us_2x.jpeg");
     }
   }
+
+  &__about
+  {
+    background-image: linear-gradient(to right bottom, rgba(#333,.7),rgba(#333,.7)), url("../img/about.jpeg");
+    background-position: center;
+    @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 200px) 
+    {
+      background-image: linear-gradient(to right bottom, rgba(#333,.7),rgba(#333,.7)), url("../img/about-2x.jpeg");
+    }
+  }
 }

@@ -28,6 +28,9 @@ body {
   100% {
     transform: translateY(0); } }
 
+hr {
+  grid-column: full-start / full-end; }
+
 .margin-bottom-small {
   margin-bottom: 1rem !important; }
 
@@ -278,6 +281,12 @@ body {
     @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 200px) {
       .header__work {
         background-image: linear-gradient(to right bottom, rgba(51, 51, 51, 0.7), rgba(51, 51, 51, 0.7)), url("../img/work_with_us_2x.jpeg"); } }
+  .header__about {
+    background-image: linear-gradient(to right bottom, rgba(51, 51, 51, 0.7), rgba(51, 51, 51, 0.7)), url("../img/about.jpeg");
+    background-position: center; }
+    @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 200px) {
+      .header__about {
+        background-image: linear-gradient(to right bottom, rgba(51, 51, 51, 0.7), rgba(51, 51, 51, 0.7)), url("../img/about-2x.jpeg"); } }
 
 nav {
   position: fixed;
@@ -417,6 +426,25 @@ nav {
 
 #nav:checked + .nav-btn i {
   background: transparent; }
+
+.about {
+  grid-column: content-start / content-end;
+  display: grid;
+  grid-template-columns: 1fr minmax(22rem, 35rem) 1fr; }
+  .about__intro {
+    font-size: calc(14px + 4 * ( (100vw - 420px) / 700));
+    grid-column: 2 / 3;
+    text-align: justify;
+    color: rgba(0, 0, 0, 0.5); }
+    @media screen and (max-width: 420px) {
+      .about__intro {
+        font-size: 14px; } }
+    @media screen and (min-width: 1120px) {
+      .about__intro {
+        font-size: 18px; } }
+
+.team {
+  grid-column: content-start / content-end; }
 
 .contact {
   grid-column: full-start / full-end;
