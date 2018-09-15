@@ -4,7 +4,7 @@
     display: grid;
     grid-template-columns: 1fr minmax(20rem, 40rem) 1fr;
     background-image: linear-gradient(to right bottom, $color-gradient-1, $color-gradient-2);
-    margin-top: -7%;
+    margin-top: -10vh;
     padding-bottom: 10rem;
 
     &__text
