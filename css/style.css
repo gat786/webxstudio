@@ -272,6 +272,12 @@ body {
     @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 200px) {
       .header__works {
         background-image: linear-gradient(to right bottom, rgba(51, 51, 51, 0.7), rgba(51, 51, 51, 0.7)), url("../img/our-works-2x.jpeg"); } }
+  .header__work {
+    background-image: linear-gradient(to right bottom, rgba(51, 51, 51, 0.7), rgba(51, 51, 51, 0.7)), url("../img/work_with_us.jpeg");
+    background-position: center; }
+    @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 200px) {
+      .header__work {
+        background-image: linear-gradient(to right bottom, rgba(51, 51, 51, 0.7), rgba(51, 51, 51, 0.7)), url("../img/work_with_us_2x.jpeg"); } }
 
 nav {
   position: fixed;
