@@ -443,9 +443,6 @@ nav {
       .about__intro {
         font-size: 18px; } }
 
-.team {
-  grid-column: content-start / content-end; }
-
 .contact {
   grid-column: full-start / full-end;
   display: grid;
