@@ -164,10 +164,10 @@ html {
   animation: btn-animate .5s ease-out 2s backwards; }
 
 .btn--primary {
-  background-color: #130f40;
+  background-color: rgba(19, 15, 64, 0.9);
   color: #fff; }
   .btn--primary::after {
-    background-color: #130f40; }
+    background-color: rgba(19, 15, 64, 0.9); }
 
 body {
   display: grid;
@@ -759,3 +759,6 @@ nav {
     @media screen and (min-width: 1120px) {
       .our-works .work__link {
         font-size: 16px; } }
+
+.bgc {
+  background-image: linear-gradient(to right bottom, #DC2424, #4A569D); }
