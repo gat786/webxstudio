@@ -58,11 +58,11 @@
 }
 .btn--primary
 {
-    background-color: $color-gradient-2;
+    background-color: rgba($color-gradient-2,.9);
     color: #fff;
 
     &::after
     {
-        background-color: $color-gradient-2;
+        background-color: rgba($color-gradient-2,.9);
     }
 }
