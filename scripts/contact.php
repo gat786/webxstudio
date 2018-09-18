@@ -30,28 +30,25 @@
             </html>";
 
             $mail->IsSMTP();
-            $mail->Host       = 'smtp.gmail.com';
+            $mail->Host       = 'sg06.tmd.cloud';
 
-            $mail->SMTPSecure = 'tls';
-            $mail->Port       = 587;
+            $mail->SMTPSecure = 'ssl/tls';
+            $mail->Port       = 465;
             // $mail->SMTPDebug  = 1;
             $mail->SMTPAuth   = true;
 
-            $mail->Username   = 'rahulrbharati@gmail.com';
-            $mail->Password   = '72485@Me';
+            $mail->Username   = 'enquiry@webxstudio.in';
+            $mail->Password   = 'enquiry@webx';
 
-            $mail->SetFrom('rahulrbharati@gmail.com', 'Rahul Bharati');
+            $mail->SetFrom('enquiy@webxstudio.in', 'Webxstudio');
             $mail->AddReplyTo('no-reply@webxstudio.in','no-reply');
             $mail->Subject    = $subject;
             $mail->MsgHTML($message);
 
-            $mail->AddAddress('rahulrbharati@gmail.com', 'title1');
+            $mail->AddAddress('mail@webxstudio.in', 'Enquiry');
 
             // $mail->AddAttachment($fileName);
-            if($mail->send())
-            {
-                echo "Thank you for contacting us. We'll get to you as soon as possible";
-            }
+            $mail->send();
         }
         catch (Exception $e) {
             echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;

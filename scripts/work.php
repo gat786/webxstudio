@@ -46,10 +46,13 @@
             $mail->Subject    = $subject;
             $mail->MsgHTML($message);
 
-            $mail->AddAddress('rahulrbharati@gmail.com', 'title1');
+            $mail->AddAddress('mail@webxstudio.in', 'Resume');
 
             $mail->AddAttachment($resume);
-            $mail->send();
+            if($mail->send())
+            {
+                echo "Thank you for contacting us. We'll get to you as soon as possible";
+            }
         }
         catch (Exception $e) {
             echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
