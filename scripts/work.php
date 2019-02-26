@@ -33,13 +33,13 @@
             $mail->IsSMTP();
             $mail->Host       = 'sg06.tmd.cloud';
 
-            $mail->SMTPSecure = 'tls';
+            $mail->SMTPSecure = 'ssl';
             $mail->Port       = 465;
-            // $mail->SMTPDebug  = 1;
+            $mail->SMTPDebug  = 0;
             $mail->SMTPAuth   = true;
 
             $mail->Username   = 'works@webxstudio.in';
-            $mail->Password   = 'works@webx';
+            $mail->Password   = 'works@webxstudio';
 
             $mail->SetFrom('works@webxstudio.in', 'Rahul Bharati');
             $mail->AddReplyTo('no-reply@webxstudio.in','no-reply');
@@ -48,7 +48,7 @@
 
             $mail->AddAddress('mail@webxstudio.in', 'Resume');
 
-            $mail->AddAttachment($resume);
+            $mail->AddStringAttachment(file_get_contents($resume["tmp_name"]), $resume["name"]);
             if($mail->send())
             {
                 echo "Thank you for contacting us. We'll get to you as soon as possible";

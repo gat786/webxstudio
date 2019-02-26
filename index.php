@@ -1,46 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125675161-1"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-125675161-1');
-    </script>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>WEBXSTUDIO : Web and mobile design and development</title>
-    <meta name="description" content="webxstudio is a web studio and software company that specializes in designing and developing beautiful and amazing websites, logos, mobile applications and computer software. We provide services in digital marketing and seo.">
-    <link rel="stylesheet" href="css/style.css">
-</head>
+<?php
+    $title = "WEBXSTUDIO : Web and mobile design and development";
+    include("./includes/header.php");
+?>
 <body>
-    <nav>
-        <input type="checkbox" id="nav" hidden>
-        <label for="nav" class="nav-btn">
-            <i></i>
-        </label>
-        <div class="logo">
-            <a href="#"><span class="brand">Web <span class="brand-X">X</span> studio</span></a>
-            <div class="nav-wrapper">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="our-works.html">Our works</a></li>
-                    <li><a href="work-with-us.html">Work with Us</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <?php
+        include("./includes/navigation.php");
+    ?>
     <header class="header">
-        <h1 class="heading-primary">Want to build a</h1>
-        <span class="heading-primary--sub txt-rotate" data-period="2000" data-rotate='["Website?","Mobile Application?","Software?"]'>&nbsp;</span>
-        <button class="btn btn-animate margin-top-medium">Hire Us</button>
+        <h1 class="heading-primary">We create amazing</h1>
+        <span class="heading-primary--sub txt-rotate" data-period="2000" data-rotate='["Websites","Mobile Applications","Softwares"]'>&nbsp;</span>
+        <a class="btn btn-animate margin-top-medium" role="link" href="contact.html">Hire Us</a>
     </header>
     <div class="services">
         <h1 class="heading-secondary">Our Services</h1>
@@ -106,21 +75,6 @@
             <li class="how__list--item">Maintain - Our Work isn't done once the project is deployed. We keep it monitoring for any issues and solve it.</li>
         </ul>
     </div>
-    <div class="cta margin-top-large">
-        <h1 class="heading-secondary margin-bottom-small">Have a project in mind?</h1>
-        <span class="cta__text">We are ready to hear! Call Us on <a href="tel:+917558228045">+917558228045</a>/<a href="tel:+919763124441">+919763124441</a> or mail us at <a href="mailto:mail@webxstudio.in">mail@webxstudio.in</a> </span>
-    </div>
-    <footer class="footer">
-        <h1 class="footer__heading">Web <span class="brand-X">X</span> Studio </h1>
-        <ul class="footer__links">
-            <li class="footer__links--items"><a href="index.html">Home</a> </li>
-            <li class="footer__links--items"><a href="about.html">About Us</a></li>
-            <li class="footer__links--items"><a href="our-works.html">Our works</a></li>
-            <li class="footer__links--items"><a href="work-with-us.html">Work with us</a></li>
-            <li class="footer__links--items"><a href="contact.html">Contact us</a></li>
-        </ul>
-        <span class="footer__copyright">All copyright reserved &copy; <span class="footer__brand">WEB <span class="brand-X">X</span> STUDIO</span>. Designed by Rahul Bharati</span>
-    </footer>
-    <script async src="js/script.min.js"></script>
-</body>
-</html>
+    <?php
+        include("./includes/footer.php");
+    ?>

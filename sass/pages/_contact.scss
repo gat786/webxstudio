@@ -76,3 +76,22 @@
         }
     }
 }
+#loading
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(#3d3d3e, .8);
+    display: none;
+    
+    & > *
+    {
+        color: #f3f3f3;
+        @include fluid-type(32px,52px);
+        display: block;
+        position: relative;
+        @include abs-center();
+    }
+}

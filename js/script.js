@@ -3,6 +3,28 @@ window.addEventListener("scroll",function(){
 });
 change();
 
+var form = document.getElementById('form');
+if(form)
+{
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    document.getElementById('loading').style.display = "block";
+    document.getElementById('loading').style.zIndex = 9999;
+    fetch(form.action,{
+      method: "POST",
+      body: new FormData(form)
+    }).then( function(response) {
+      form.reset();
+      return response.text();
+    }).then(function(response){
+      console.log(response)
+      form.innerHTML += "Thank you for contacting us. We'll get to you as soon as possible";
+      document.getElementById('loading').style.display = "block";
+    document.getElementById('loading').style.zIndex = -9999;
+    });
+  });
+} 
+
 function change()
 {
   if(window.scrollY > 0)
@@ -72,4 +94,5 @@ window.onload = function() {
   css.type = "text/css";
   css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
   document.body.appendChild(css);
-};
+}
+

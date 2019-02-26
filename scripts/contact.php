@@ -8,50 +8,49 @@
 
     $mail = new PHPMailer();
 
-    if(isset($_POST["submit"]))
+    try
     {
-        try
-        {
-            $name = $_POST["name"];
-            $type = $_POST["type"];
-            $email = $_POST["email"];
-            $description = $_POST["description"];
-            $to = "mail@webxstudio.in";
-            $subject = "Contact for $type";
-            $message = "<html>
-            <head>
-            <title>Contact for $type</title>
-            </head>
-            <body>
-            <p>name: $name</p>
-            <p>email: $email</p>
-            <p>Description: </br>$description</p>
-            </body>
-            </html>";
+        $name = $_POST["name"];
+        $type = $_POST["type"];
+        $email = $_POST["email"];
+        $description = $_POST["description"];
+        $to = "mail@webxstudio.in";
+        $subject = "Contact for $type";
+        $message = "<html>
+        <head>
+        <title>Contact for $type</title>
+        </head>
+        <body>
+        <p>name: $name</p>
+        <p>email: $email</p>
+        <p>Description: </br>$description</p>
+        </body>
+        </html>";
 
-            $mail->IsSMTP();
-            $mail->Host       = 'sg06.tmd.cloud';
+        $mail->IsSMTP();
+        $mail->Host       = 'sg06.tmd.cloud';
 
-            $mail->SMTPSecure = 'ssl/tls';
-            $mail->Port       = 465;
-            // $mail->SMTPDebug  = 1;
-            $mail->SMTPAuth   = true;
+        $mail->SMTPSecure = 'ssl';
+        $mail->Port       = 465;
+        $mail->SMTPDebug  = 0;
+        $mail->SMTPAuth   = true;
 
-            $mail->Username   = 'enquiry@webxstudio.in';
-            $mail->Password   = 'enquiry@webx';
+        $mail->Username   = 'enquiry@webxstudio.in';
+        $mail->Password   = 'enquiry@webxstudio';
 
-            $mail->SetFrom('enquiy@webxstudio.in', 'Webxstudio');
-            $mail->AddReplyTo('no-reply@webxstudio.in','no-reply');
-            $mail->Subject    = $subject;
-            $mail->MsgHTML($message);
+        $mail->SetFrom('enquiry@webxstudio.in', 'Webxstudio');
+        $mail->AddReplyTo('no-reply@webxstudio.in','no-reply');
+        $mail->Subject    = $subject;
+        $mail->MsgHTML($message);
 
-            $mail->AddAddress('mail@webxstudio.in', 'Enquiry');
+        $mail->AddAddress('mail@webxstudio.in', 'Enquiry');
 
-            // $mail->AddAttachment($fileName);
-            $mail->send();
-        }
-        catch (Exception $e) {
-            echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
-        }
+        // $mail->AddAttachment($fileName);
+        $mail->send();
+        $msg = "Thank you for contacting us. We'll get to you as soon as possible";
     }
+    catch (Exception $e) {
+        $msg = 'Message could not be sent. Mailer Error: '. $mail->ErrorInfo;
+    }
+    return $msg;
 ?>
