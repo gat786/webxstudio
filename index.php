@@ -9,10 +9,10 @@
     <header class="header">
         <h1 class="heading-primary">We create amazing</h1>
         <span class="heading-primary--sub txt-rotate" data-period="2000" data-rotate='["Websites","Mobile Applications","Softwares"]'>&nbsp;</span>
-        <a class="btn btn-animate margin-top-medium" role="link" href="contact.html">Hire Us</a>
+        <a class="btn btn-animate margin-top-medium" role="link" href="contact.php">Hire Us</a>
     </header>
     <div class="services">
-        <h1 class="heading-secondary">Our Services</h1>
+        <h2 class="heading-secondary">Our Services</h2>
         <div class="services__box">
             <img src="img/graphic.jpg" alt="graphic design" class="services__img">
             <span class="services__heading">Graphic Design</span>
@@ -46,11 +46,11 @@
     </div>
 
     <div class="create">
-        <h1 class="create__heading">We love to bring your dreams to life.</h1>
+        <h2 class="create__heading">We love to bring your dreams to life.</h2>
     </div>
     
     <div class="why margin-top-large">
-        <h1 class="heading-secondary margin-bottom-medium">Why do you need it?</h1>
+        <h2 class="heading-secondary margin-bottom-medium">Why do you need it?</h1>
         <img src="img/why.jpg" alt="mac image software" class="why__img">
         <ul class="why__list">
             <li class="why__list--item">Websites develops an online presence essential for business success in the modern economy</li>
@@ -63,7 +63,7 @@
         </ul>
     </div>
     <div class="how margin-top-large">
-        <h1 class="heading-secondary margin-bottom-medium">How do we provide it?</h1>
+        <h2 class="heading-secondary margin-bottom-medium">How do we provide it?</h2>
         <img src="img/collaboration.jpg" alt="How we provide it image" class="how__img margin-bottom-medium">
         <ul class="how__list">
             <li class="how__list--item">Communication - We take time to communicate with you and understand your need.</li>

@@ -7,24 +7,6 @@
     <?php
         include("./includes/navigation.php");
     ?>
-    <nav>
-        <input type="checkbox" id="nav" hidden>
-        <label for="nav" class="nav-btn">
-            <i></i>
-        </label>
-        <div class="logo">
-            <a href="#"><span class="brand">Web <span class="brand-X">X</span> studio</span></a>
-            <div class="nav-wrapper">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="our-works.html">Our works</a></li>
-                    <li><a href="work-with-us.html">Work with Us</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
     <header class="header header__work">
         <h1 class="heading-primary">Build your career with us.</h1>
         <h1 class="heading-primary--sub">Work with us</h1>

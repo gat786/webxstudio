@@ -12,7 +12,7 @@
     </header>
     <div class="our-works">
         <h1 class="heading-secondary">Our Works</h1>
-        <a href="http://webxstudio.in" class="work__box">
+        <a href="https://webxstudio.in" class="work__box">
             <img src="img/webxstudio.png" alt="WEBXSTUDIO" class="work__img">
             <span class="work__link">Webxstudio.in</span>
         </a>
@@ -24,11 +24,11 @@
             <img src="img/iqac.png" alt="R. D. National College" class="work__img">
             <span class="work__link">IQAC App</span>
         </a>
-        <a href="http://smartcomputerinstitute.org" class="work__box">
+        <a href="https://smartcomputerinstitute.org" class="work__box">
             <img src="img/smartcomputerinstittute.png" alt="Smart Computer Institute" class="work__img">
             <span class="work__link">Smart Computer Institute</span>
         </a>
-        <a href="http://manage.smartcomputerinstitute.org" class="work__box">
+        <a href="https://manage.smartcomputerinstitute.org" class="work__box">
             <img src="img/manage.png" alt="Smart Computer Institute management" class="work__img">
             <span class="work__link">Smart Computer Institute</span>
         </a>

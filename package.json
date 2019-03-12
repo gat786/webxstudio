@@ -8,9 +8,9 @@
     "devserver": "live-server",
     "start": "npm-run-all --parallel devserver watch:sass",
     "compile:sass": "node-sass sass/main.scss css/style.comp.css",
-    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
+    "prefix:css": "postcss css/style.comp.css --use autoprefixer -o css/style.prefix.css",
     "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
-    "compress:js": "node-minify --compressor uglifyjs --input 'js/script.js' --output 'js/script.min.js'",
+    "compress:js": "node-minify --compressor uglifyjs --input js/script.js --output js/script.min.js",
     "build": "npm-run-all compile:sass prefix:css compress:css compress:js"
   },
   "keywords": [
